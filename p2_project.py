@@ -139,6 +139,8 @@ class data_state:
         plt.show()
 
 
+
+
     def plot_confusion_matrix(self, y_true, y_pred, title, save_png = False):
         cm = sk.metrics.confusion_matrix(y_true, y_pred)
         disp = sk.metrics.ConfusionMatrixDisplay(cm)
@@ -431,6 +433,8 @@ class data_state:
 
         else:
             raise ValueError("in_ex parameter must be either 'include' or 'exclude'")
+        
+        return y_train, y_pred, y_test, y_pred_test, y_pred_test_prob
 
 
 if __name__ == "__main__":
